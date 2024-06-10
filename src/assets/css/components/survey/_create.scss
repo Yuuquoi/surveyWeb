@@ -1,0 +1,414 @@
+.createHeader{
+    margin-top: 2vw;
+    margin-bottom: 2vw;
+    display: flex;
+    justify-content: space-evenly;
+    padding-left: 20vw;
+    padding-right: 20vw;
+    .block{
+        width: 7vw;
+        height: 3vw;
+        border: 0.2vw solid;
+        text-align: center;
+        line-height: 2.8vw;
+        font-size: 1.2vw;
+        position: relative;
+        color: white;
+    }
+    .one{
+        background-color: $red;
+        &::before{
+            content: ""; 
+            width: 2vw;
+            height: 2vw;
+            position: absolute;
+            top: 0.35vw;
+            left: 5.7vw;
+            background-color: $red;
+            transform: rotate(45deg);
+        }
+    }
+    .two{
+        border: 0.2vw solid $yellow;
+        background-color: white;
+        color: $yellow;
+        &::before{
+            content: ""; 
+            width: 2vw;
+            height: 2vw;
+            position: absolute;
+            top: 0.265vw;
+            left: 5.7vw;
+            background-color: white;
+            border-top: 0.2vw solid $yellow;
+            border-right: 0.2vw solid $yellow;
+            transform: rotate(45deg);
+         }
+    }
+     .three{
+        border: 0.2vw solid $green;
+        background-color: white;
+        color: $green;
+        &::before{
+            content: ""; 
+            width: 2vw;
+            height: 2vw;
+            position: absolute;
+            top: 0.265vw;
+            left: 5.7vw;
+            background-color: white;
+            border-top: 0.2vw solid $green;
+            border-right: 0.2vw solid $green;
+            transform: rotate(45deg);
+        }
+    }
+}
+
+.mode2{
+    .two{
+        color: white;
+        background-color: $yellow;
+        &::before{
+            content: ""; 
+            width: 2vw;
+            height: 2vw;
+            position: absolute;
+            top: 0.265vw;
+            left: 5.7vw;
+            background-color: $yellow;
+            transform: rotate(45deg);
+         }
+    }
+}
+
+.mode3{
+    .three{
+        background-color: $green;
+        color: white;
+        &::before{
+            content: ""; 
+            width: 2vw;
+            height: 2vw;
+            position: absolute;
+            top: 0.265vw;
+            left: 5.7vw;
+            background-color: $green;
+            transform: rotate(45deg);
+        }
+    }    
+}
+
+.createBody{
+    width: 98vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .inputBasicInfo{
+        width: 70vw;
+        border: 0.15vw solid $textColor;
+        border-radius: 20px;
+        height: 15vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 2vw;
+        input{
+            display: block;
+            width: 65vw;
+        }
+        #surveyTitle{
+            font-size: 2vw;
+            margin-bottom: 1.4vw;
+            
+        }
+        #surveyDescription{
+            font-size: 1.5vw;
+        }
+        label{
+            color: $textColor;
+            font-size: 1.4vw;
+            width: 64.5vw;
+            margin-bottom: 0.5vw;
+            #surveyTime{
+                display: inline-block;
+                width: 13vw;
+                border-bottom: 0.1vw dotted $lightGray;
+            }
+        }
+    }
+    .inputEachQuestion{
+        .oneQuesBg{
+            width: 99.8vw;
+            display: flex;
+            justify-content: center;
+            .oneQues{
+                width: 70vw;
+                border: 0.15vw solid $textColor;
+                border-radius: 20px;
+                padding: 2vw;
+                padding-bottom: 1vw;
+                position: relative;
+                margin-bottom: 2vw;
+                background-color: white;
+                margin-top: 1vw;
+                margin-bottom: 1vw;
+                .questionName{
+                    width: 53vw;
+                    font-size: 1.6vw;
+                    margin-right: 1.5vw;
+                    margin-bottom: 1vw;
+                }
+                .questionType{
+                    position: absolute;
+                    cursor: pointer;
+                    right: 3vw;
+                    width: 10vw;
+                    border: 0.1vw solid $textColor;
+                }
+                .option{
+                    .oneOption{
+                        margin-bottom: 1vw;
+                        span{
+                            color: $textColor;
+                        }
+                        .OinLeft{
+                            margin-right: 1vw;
+                        }
+                        .optionInmiddle{
+                            width: 60vw;
+                        }
+                        .XinRight{
+                            margin-left: 1vw;
+                            cursor: pointer;
+                        }
+                        .XinRight:hover{
+                            color:$red;
+                        }
+                    }
+                    .addOption{
+                        margin-top: 1vw;
+                        span{
+                            color: $lightGray;
+                            cursor: pointer;
+                        }
+                    }
+                }
+                .text{
+                    input{
+                        margin-top: 1vw;
+                        width: 40vw;
+                        margin-bottom: 1vw;
+                    }
+                }
+                .editTool{
+                    padding-top: 1vw;
+                    margin-top: 1vw;
+                    font-size: 1.6vw;
+                    height: 4vw;
+                    line-height: 2vw;
+                    position: relative;
+                    p{
+                        color: $textColor;
+                        position: absolute;
+                        right: 2vw;
+                        .red{
+                            color: rgb(211, 69, 95);
+                            font-weight: 500;
+                        }
+                        .fa-trash{
+                            font-size: 2vw;
+                            cursor: pointer;
+                        }
+                        i{
+                            cursor: pointer;
+                            height: 2.6vw;
+                            font-size: 2.4vw;
+                        }
+                        i:hover{
+                            color: $blue;
+                        }
+                    }
+                }
+                .editTool::before{
+                    content: "";
+                    width: 65vw;
+                    border-bottom: 0.1vw solid $lightGray;
+                    position: absolute;
+                    top: 0vw;
+                }                
+            }
+            .requiredStyle{
+                border-color: $red;
+                .editTool{
+                    p{
+                        .red{
+                            color: rgb(211, 69, 95);
+                            font-weight: 500;
+                        }
+                    }
+            }
+            }
+        }
+        .editQues{
+            background-color: rgba(55, 136, 235, 0.24);
+            .oneQues{
+                border: 0.2vw solid $blue;
+            }
+        }
+    }
+}
+
+.footerLink{
+    height: 6vw;
+    width: 98vw;
+    margin-top: 2.4vw;
+    display: flex;
+    margin-bottom: 5vw;
+    align-items: center;
+    justify-content: space-around;
+    padding-left: 20vw;
+    padding-right: 20vw;
+    button{
+        width: 10vw;
+        height: 4vw;
+        cursor: pointer;
+    }
+    .cancelBtn{
+        display: block;
+        position: relative;
+        color: $lightGray;
+        background-color: white;
+        border: 0.2vw solid $lightGray;
+        border-radius: 20px;
+        padding-left: 1.5vw;
+        &::before{
+            content: "";
+            width: 0vw;
+            height: 0vw;
+            border: 0.8vw solid;
+            border-color: transparent $lightGray transparent transparent ;
+            position: absolute;
+            left: 0.8vw;
+            top: 1.1vw;
+        }
+        &:hover{
+            background-color: $lightGray;
+            color: white;
+            &::before{
+                border-color: transparent white transparent transparent ;
+            }
+        }
+    }
+    .checkBtn{
+        display: block;
+        position: relative;
+        color: $yellow;
+        background-color: white;
+        border: 0.2vw solid $yellow;
+        border-radius: 20px;
+        padding-right: 1.5vw;
+        &::before{
+            content: "";
+            width: 0vw;
+            height: 0vw;
+            border: 0.8vw solid;
+            border-color: transparent transparent transparent $yellow;
+            position: absolute;
+            right: 0.8vw;
+            top: 1.1vw;
+        }
+        &:hover{
+            background-color: $yellow;
+            color: white;
+            &::before{
+                border-color: transparent transparent transparent white;
+            }
+        }
+    }
+    .addQFunction{
+        width: 4.5vw;
+        height: 4.5vw;
+        border: 0.2vw solid $blue;
+        border-radius: 50% 50%;
+        position: relative;
+        cursor: pointer;
+        background-color: $blue;
+        .fa-plus{
+            font-size: 2.4vw;
+            color: white;
+        }
+        .fa-plus::before{
+            // background-color: white;
+            color: white;
+            position: absolute;
+            left: 25%;
+            top: 22%;
+        }
+        &:hover{
+            background-color: white;
+            .fa-plus{
+                color: $blue;
+            }
+            .fa-plus::before{
+                color: $blue;
+            }
+        }        
+    }
+    .backEditBtn{
+        display: block;
+        position: relative;
+        color: $red;
+        background-color: white;
+        border: 0.2vw solid $red;
+        border-radius: 20px;
+        padding-left: 1.5vw;
+        &::before{
+            content: "";
+            width: 0vw;
+            height: 0vw;
+            border: 0.8vw solid;
+            border-color: transparent $red transparent transparent ;
+            position: absolute;
+            left: 0.8vw;
+            top: 1.1vw;
+        }
+        &:hover{
+            background-color: $red;
+            color: white;
+            &::before{
+                border-color: transparent white transparent transparent ;
+            }
+        }
+    }
+    .sendBtn{
+        display: block;
+        position: relative;
+        color: $green;
+        background-color: white;
+        border: 0.2vw solid $green;
+        border-radius: 20px;
+        padding-right: 1.5vw;
+        &::before{
+            content: "";
+            width: 0vw;
+            height: 0vw;
+            border: 0.8vw solid;
+            border-color: transparent transparent transparent $green;
+            position: absolute;
+            right: 0.8vw;
+            top: 1.1vw;
+        }
+        &:hover{
+            background-color: $green;
+            color: white;
+            &::before{
+                border-color: transparent transparent transparent white;
+            }
+        }
+    }
+}
+
+
+

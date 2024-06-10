@@ -1,0 +1,45 @@
+.resultDiv{
+    width: 98vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5vw;
+    .errorMsg{
+        width: 70vw;
+    }
+    .inputBasicInfo{
+        width: 70vw;
+        border: 0.15vw solid $textColor;
+        border-radius: 20px;
+        height: 15vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 5vw;
+        margin-bottom: 2vw;
+        p{
+            display: block;
+            width: 65vw;
+        }
+        #surveyTitle{
+            font-size: 2vw;
+            margin-bottom: 1.4vw;
+        }
+        #surveyDescription{
+            font-size: 1.5vw;
+        }
+        span{
+            color: $textColor;
+            font-size: 1.2vw;
+            width: 64.5vw;
+            margin-bottom: 0.5vw;
+            #surveyTime{
+                display: inline-block;
+                width: 21vw;
+                border-bottom: 0.1vw dotted $lightGray;
+            }
+        }
+    }
+}

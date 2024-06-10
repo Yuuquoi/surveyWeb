@@ -1,0 +1,24 @@
+.area{
+    width: 98vw;
+    height: 6vw;
+    display: flex;
+    align-items: center;
+    border-bottom: 0.5px solid $lightGray;
+    margin-bottom: 7vh;
+    .logo{
+        width: 18vw;
+        height: 5vw;
+        background-image: url("../components/icons/logo.jpg");
+        background-size: 80%;
+        background-repeat: no-repeat;
+        background-position: 60% -10%;
+        padding-left: 2vw;
+        margin-right: 68vw;
+        cursor: pointer;
+    }
+    i{
+        font-size: 2.5vw;
+        color: $textColor;
+        letter-spacing: 2vw;
+    }
+}

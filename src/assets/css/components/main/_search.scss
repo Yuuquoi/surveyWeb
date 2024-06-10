@@ -1,0 +1,185 @@
+.searchArea{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    .searchBlock{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 80vw;
+        height: 18vw;
+        border-radius: 10px;
+        background-color: white;
+        border: 0.15vw solid $textColor;
+        box-shadow: 0px 2px 3px $lightGray;
+        .keywordBlock{
+            width: 80vw;
+            height: 5vw;
+            padding-left: 6.3vw;
+            margin-top: 1.5vw;
+            #keyword{
+                width: 60vw;
+                margin-left: 3.7vw;
+            }
+        }
+        .timeBlock{
+            width: 80vw;
+            height: 5vw;    
+            padding-left: 5.5vw;
+            .timeInput{
+                width: 20vw;
+            }
+            .searcBtn{
+                width: 9.4vw;
+                height: 2.5vw;
+                border-radius: 10px;
+                color: white;
+                background-color: $textColor;
+            }
+        }
+        .filterBlock{
+            margin-top: 0.2vw;
+            width: 66.2vw;
+            display: flex;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+            span{
+                display: block;
+                font-weight: 400;
+                color: $textColor;
+                font-size: 1.5vw;
+                margin-right: 5vw;
+            }    
+            input{
+                left: 2vw;
+                top: 0.2vw;
+                width: 1.6vw;
+                height: 1.6vw;
+                cursor: pointer;
+            }
+            label{
+                color: $textColor;
+                font-size: 1.5vw;
+                line-height: 0vw;
+                margin-right: 2vw;
+                margin-left: 0.5vw;
+                cursor: pointer;
+            }
+            &::after{
+                content: "";
+                position: absolute;
+                left: -4.5vw;
+                top: -1vw;
+                width: 75vw;
+                border-bottom: 0.2vw dotted $lightGray;
+            }
+        }
+    }
+}
+
+.searchInput{
+    height: 2.5vw;
+    border: 0.15vw solid $textColor;
+    margin-left: 3vw;
+    margin-right: 3vw;
+    border-radius: 8px;
+    padding-left: 1vw;
+    padding-right: 1vw;
+}
+
+.searchBlockText{
+    color: $textColor;
+    line-height: 140%;
+    padding-top: 0.1vw;
+}
+
+.searchResultArea{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .oneResultArea{
+        padding-left: 5vw;
+        padding-right: 5vw;
+        width: 80vw;
+        height: 5vw;
+        margin-bottom: 1vw;
+        display: flex;
+        align-items: center;
+        border: 0.2vw solid black;
+        border-radius: 25px;
+        justify-content: center;
+        p{
+            text-align: center;
+            font-size: 2vw;
+        }
+        .oneResultName{
+            width: 20vw;
+        }
+        .oneResultStatus{
+            width: 20vw;
+        }
+        .oneResultTime{
+            width: 30vw;
+        }
+    }
+}
+
+.errorMsg{
+    margin-top: 2vw;
+    font-size: 2vw;
+    letter-spacing: 1vw;
+    width: 80vw;
+    height: 10vw;
+    border: 0.3vw solid $blue;
+    border-radius: 20px;
+    text-align: center;
+    line-height: 10vw;
+    color:$blue;
+    background-color: white;
+    font-weight: 600;
+}
+
+.searcBtn:hover{
+    cursor: pointer;
+}
+
+.oneResultTopBar{
+    padding-left: 5vw;
+    padding-right: 5vw;
+    width: 80vw;
+    height: 5vw;
+    margin-top: 1vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    p{
+        text-align: center;
+        font-size: 1.8vw;
+        color: $textColor;
+    }
+    .oneResultName{
+        width: 20vw;
+    }
+    .oneResultStatus{
+        width: 20vw;
+    }
+    .oneResultTime{
+        width: 30vw;
+    }
+}
+
+.searchBtnArea{
+    margin-top: 2vw;
+    margin-bottom: 3vw;
+    button{
+        width: 3vw;
+        height: 3vw;
+        background-color: white;
+        cursor: pointer;
+        margin-left: 0.5vw;
+        font-size: 1.8vw;
+    }
+}

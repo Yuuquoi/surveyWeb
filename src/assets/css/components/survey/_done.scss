@@ -1,0 +1,97 @@
+.doneBody{
+    position: relative;
+    width:98vw;
+    height: 50vw;
+    .functionBody{
+        width: 98.5vw;
+        height: 20vw;
+        position: absolute;
+        top:35%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        // border: 1px solid #000;
+        p{
+            font-size: 2.6vw;
+            display: block;
+            text-align: center;
+            margin-bottom: 2vw;
+            color: $textColor;
+        }
+        button{
+            width: 10vw;
+            height: 5vw;
+            display: block;
+            background-color: $blue;
+            border-radius: 20px;
+            color: white;
+            font-size: 2vw;
+            cursor: pointer;
+        }
+    }
+    .rainbow {
+        position: absolute;
+        top: 30%;
+        left: 67%;
+        transform: translate(-50%, -50%);
+        ul {
+            position: relative;
+            width: 500px;
+            height: 320px;
+            overflow: hidden;
+            border-bottom: 1px solid rgba(0, 0, 0, .2);
+            transform: translate(-50%, -50%);
+            li {
+                list-style: none;
+                border-radius: 50%;
+                border: 20px solid #000;
+                position: absolute;
+                top: 100%;
+                left: 50%;
+                border-bottom-color: transparent !important;
+                border-left-color: transparent !important;
+                box-shadow: 0 0 10px rgba(0, 0, 0, .5);
+                transform: translate(-50%, -50%)  rotate(-225deg);
+                animation: animate 5s ease-out normal forwards;
+                &:nth-child(1) {
+                    width: 80px;
+                    height: 80px;
+                    border-color: $blue;
+                    animation-delay: 250ms;
+                }
+    
+                &:nth-child(2) {
+                    width: 120px;
+                    height: 120px;
+                    border-color: $green;
+                    animation-delay: 500ms;
+                }
+    
+                &:nth-child(3) {
+                    width: 160px;
+                    height: 160px;
+                    border-color: $yellow;
+                    animation-delay: 750ms;
+                }
+    
+                &:nth-child(4) {
+                    width: 200px;
+                    height: 200px;
+                    border-color: $red;
+                    animation-delay: 1000ms;
+                }
+    
+            }
+        }
+    }
+    
+}
+
+@keyframes animate {
+    0% {
+            transform:translate(-50%, -50%) rotate(-225deg);
+    }
+    100% {
+            transform:translate(-50%, -50%) rotate(-45deg);
+    }
+}
